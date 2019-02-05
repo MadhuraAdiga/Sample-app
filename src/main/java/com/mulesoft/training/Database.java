@@ -21,7 +21,7 @@ public class Database implements InitializingBean {
             conn = DriverManager.getConnection(dbURL);
             DatabaseMetaData md = conn.getMetaData();
             ResultSet rs = md.getTables(null, null, "%", null);
-            logger.debug("&&&& - DB Init - &&&&");
+            logger.debug("&&&& - DB Init - &&&&");;
             int i=0;
             while (rs.next()){
                 logger.debug("there is next " + rs.getString(3));
